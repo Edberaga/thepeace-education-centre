@@ -1,4 +1,5 @@
 import React from "react";
+import './App.css'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 //import the pages
 import { Home } from './pages/Home'
@@ -8,10 +9,12 @@ import { Donation } from "./pages/Donation";
 import { Gallery } from "./pages/Gallery";
 import { Contact } from "./pages/Contact";
 import ErrorPage from "./pages/Others/errorPage";
+import { Navbar } from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <Router>
+      <Navbar/>
       <main>
         <Routes>
           <Route path="/" element={<Home/>}/>

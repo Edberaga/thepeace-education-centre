@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Lato:wght@300&family=Rubik:wght@500&display=swap');
+/*
+font-family: 'Edu VIC WA NT Beginner', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Rubik', sans-serif;
+*/
+body {
+    font-family: 'Rubik', sans-serif;
+}
