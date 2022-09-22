@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Donations = () => {
+export const Donation = () => {
     return (
         <>
             <div className="container">
