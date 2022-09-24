@@ -47,17 +47,17 @@ export const Navbar = () => {
         The Peace Education Centre
       </NavLink>
 
-      <button
-        className='navbar-toggler'
+      <button 
+        className="navbar-toggler"
         onClick={ function(){
           setTimeout(function(){ animation(); });
         }}
-        type='button' data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="#navbarSupportedContent"
-        aria-expanded="false"
-        aria-label='Toggle navigation'>
-          <i className='fas fa-bars text-white'></i>
+        type="button" data-toggle="collapse" 
+        data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation">
+        <i className="fas fa-bars text-white"></i>
       </button>
       
       <div 
