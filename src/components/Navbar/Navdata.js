@@ -1,43 +1,45 @@
 import React from 'react';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
+import {FaRegNewspaper} from 'react-icons/fa';
+import {AiFillHome, AiFillPicture} from 'react-icons/ai';
+import {IoMdPeople} from 'react-icons/io';
+import {MdContactMail} from 'react-icons/md';
+import {BiDonateHeart} from 'react-icons/bi';
 
 export const SidebarData = [
   {
     title: 'Home',
     path: '/',
-    icon: <AiIcons.AiFillHome />,
+    icon: <AiFillHome />,
     cName: 'nav-text'
   },
   {
     title: 'About Us',
     path: '/about',
-    icon: <IoIcons.IoIosPaper />,
+    icon: <IoMdPeople />,
     cName: 'nav-text'
   },
   {
     title: 'Donation',
     path: '/donation',
-    icon: <FaIcons.FaCartPlus />,
+    icon: <BiDonateHeart />,
     cName: 'nav-text'
   },
   {
     title: 'Blog',
     path: '/blog',
-    icon: <IoIcons.IoMdPeople />,
+    icon: <FaRegNewspaper/>,
     cName: 'nav-text'
   },
   {
     title: 'Gallery',
     path: '/gallery',
-    icon: <FaIcons.FaEnvelopeOpenText />,
+    icon: <AiFillPicture/>,
     cName: 'nav-text'
   },
   {
     title: 'Contact Us',
     path: '/contact',
-    icon: <IoIcons.IoMdHelpCircle />,
+    icon: <MdContactMail />,
     cName: 'nav-text'
   }
 ];
