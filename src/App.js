@@ -9,24 +9,24 @@ import { Donation } from "./pages/Donation";
 import { Gallery } from "./pages/Gallery";
 import { Contact } from "./pages/Contact";
 import ErrorPage from "./pages/Others/errorPage";
-import { Navbar } from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <Router>
-      <Navbar/>
-      <main>
+    <>
+      <Router>
+        <Navbar />
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/donation" element={<Donation/>}/>
-          <Route path="/blog" element={<Blog/>}/>
-          <Route path="/gallery" element={<Gallery/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="*" element={<ErrorPage/>}/>
+          <Route path='/' element={<Home/>} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/donation' element={<Donation/>} />
+          <Route path='/blog' element={<Blog/>} />
+          <Route path='/gallery' element={<Gallery/>} />
+          <Route path='/contact' element={<Contact/>} />
+          <Route path='*' element={<ErrorPage/>} />
         </Routes>
-      </main>
-    </Router>
+      </Router>
+    </>
   );
 }
 
