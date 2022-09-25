@@ -17,13 +17,38 @@ function Navbar() {
       <IconContext.Provider value={{ color: '#fff' }}>
 
         <div className='navbar'>
-          <Link to="/">
-            <img src={require('../../img/logo.jpeg')} alt="TPEC logo" srcset="" className='nav-logo'/>
-          </Link>
+          <div className='first-bar'> 
+            <Link to="/">
+              <img src={require('../../img/logo.jpeg')} alt="TPEC logo" srcset="" className='nav-logo'/>
+            </Link>
+          </div>
 
-          <Link to='#' className='menu-bars'>
-            <FaBars onClick={showSidebar} className='menu-btn'/>
-          </Link>
+          <div className="second-bar">
+            <div className='first-row-nav'>
+              <li className="nav-text">
+                <BsTelephoneFill/>
+                <span> + 601 8232 2011</span>
+              </li>
+              <li className="nav-text">
+                <AiOutlineMail style={{ fontSize: '140%' }}/>
+                <span> thepeaceedu@gmail.com</span>
+              </li>
+            </div>
+
+            <div className='second-row-nav'>
+              <div className='nav-links'>
+                <Link to='#' className='menu-bars'>
+                  <FaBars onClick={showSidebar} className='menu-btn'/>
+                </Link>
+              </div>
+              <div className="nav-user">
+                <Link>
+                  <button to='/signup'>Sign Up</button>
+                </Link>
+              </div>
+            </div>
+            
+          </div>
         </div>
 
         {/*Sidebar code */}
