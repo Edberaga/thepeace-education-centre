@@ -36,18 +36,30 @@ function Navbar() {
             </div>
 
             <div className='second-row-nav'>
-              <div className='nav-links'>
-                <Link to='#' className='menu-bars'>
-                  <FaBars onClick={showSidebar} className='menu-btn'/>
-                </Link>
-              </div>
+              <nav className='nav-links-destkop'>
+                <ul className='nav-menu-items'>
+                {SidebarData.map((item, index) => {
+                  return (
+                    <li key={index} className={item.cName}>
+                      <Link to={item.path} >
+                        {item.icon}
+                        <span>{item.title}</span>
+                      </Link>
+                    </li>
+                  );
+                })}
+                </ul>
+              </nav>
+              {/*For the tablet and mobile navbar: */}
+              <Link to='#' className='menu-bars'>
+                <FaBars onClick={showSidebar} className='menu-btn'/>
+              </Link>
               <div className="nav-user">
                 <Link>
                   <button to='/signup'>Sign Up</button>
                 </Link>
               </div>
             </div>
-            
           </div>
         </div>
 
