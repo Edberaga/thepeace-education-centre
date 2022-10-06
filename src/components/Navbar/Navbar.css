@@ -1,6 +1,6 @@
 .navbar {
   background-color: #fff;
-  height: 100px;
+  height: 125px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,6 +102,7 @@
   color: #fff;
   background-color: var(--second-color);
   font-size: 20px;
+  padding: 0px 28px;
 }
 
 .nav-user {
@@ -128,7 +129,7 @@
   transition: 0.28s ease-in;
 }
 
-.nav-user a:hover, ..mobile-nav-user a:hover{
+.nav-user a:hover, .mobile-nav-user a:hover{
   background-color: var(--primary-color);
 }
 
@@ -226,6 +227,11 @@ span {
 
   .nav-links {
     width: 50%;
+  }
+
+  .nav-user{
+    margin: 0;
+    margin-left: auto;
   }
 
   /*Navigation Sidebar*/
