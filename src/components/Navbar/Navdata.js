@@ -19,13 +19,13 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Donation',
+    title: 'Donate',
     path: '/donation',
     icon: <BiDonateHeart />,
     cName: 'nav-text nav-donate'
   },
   {
-    title: 'Blog',
+    title: 'News',
     path: '/blog',
     icon: <FaRegNewspaper/>,
     cName: 'nav-text'
