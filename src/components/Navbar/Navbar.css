@@ -1,5 +1,5 @@
 .navbar {
-  background-color: var(--second-color);
+  background-color: #fff;
   height: 100px;
   display: flex;
   justify-content: center;
@@ -33,7 +33,6 @@
 
   background-color: var(--primary-color);
   padding: 8px 15px;
-  color: var(--second-color);
   font-size: smaller;
 }
 
@@ -44,6 +43,7 @@
 }
 
 .first-row-nav .nav-text {
+  color: #f5f5f5;
   margin-right: 15px;
 }
 
@@ -89,13 +89,56 @@
 }
 
 .nav-text a:hover {
-  color: var(--second-color);
+  color: #fff;
   background-color: var(--primary-color);
   font-size: 20px;
 }
 
-.nav-user{
+.nav-donate a {
+  color: var(--second-color);
+}
+
+.nav-donate a:hover{
+  color: #fff;
+  background-color: var(--second-color);
+  font-size: 20px;
+}
+
+.nav-user {
   margin: auto;
+  border: 0;
+  background-color: #fff;
+}
+
+.mobile-nav-user{
+  margin-left: 10px;
+  background-color: #060b26;
+}
+
+.nav-user a, .mobile-nav-user a {
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  background-color: var(--second-color);
+  border-radius: 25px;
+
+  display: flex;
+  align-items: center;
+  transition: 0.28s ease-in;
+}
+
+.nav-user a:hover, ..mobile-nav-user a:hover{
+  background-color: var(--primary-color);
+}
+
+.nav-user-icon, .mobile-nav-user-icon{
+  font-size: 25px;
+  fill: #fff;
+}
+
+.nav-button {
+  display: none;
 }
 
 /*Navigation sidebar*/
@@ -246,5 +289,9 @@ span {
 
   .nav-user{
     display: none;
+  }
+
+  .nav-button {
+    display: block;
   }
 }

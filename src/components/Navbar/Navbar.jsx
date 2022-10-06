@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {FaBars} from 'react-icons/fa';
+import {FaBars, FaUserCircle} from 'react-icons/fa';
 import {BsTelephoneFill} from 'react-icons/bs'
 import {AiFillCloseCircle, AiOutlineMail} from 'react-icons/ai';
 import { Link } from 'react-router-dom';
@@ -54,11 +54,12 @@ function Navbar() {
               <Link to='#' className='menu-bars'>
                 <FaBars onClick={showSidebar} className='menu-btn'/>
               </Link>
-              <div className="nav-user">
-                <Link>
-                  <button to='/signup'>Sign Up</button>
+              <button className="nav-user">
+                <Link to='/signup'>
+                  <FaUserCircle className='nav-user-icon'/>
+                  <span>Sign Up</span>
                 </Link>
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -81,13 +82,24 @@ function Navbar() {
                 </li>
               );
             })}
+            {/*Phone number */}
             <li className="nav-text">
               <BsTelephoneFill/>
               <span> + 601 8232 2011</span>
             </li>
+            {/*Email */}
             <li className="nav-text">
               <AiOutlineMail style={{ fontSize: '130%' }}/>
               <span> thepeaceedu@gmail.com</span>
+            </li>
+            {/*Sign UP button for phone */}
+            <li className='nav-button'>
+              <button className="mobile-nav-user">
+                  <Link to='/signup'>
+                    <FaUserCircle className='mobile-nav-user-icon'/>
+                    <span>Sign Up</span>
+                  </Link>
+                </button>
             </li>
           </ul>
         </nav>

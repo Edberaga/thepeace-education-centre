@@ -10,6 +10,7 @@ import { Gallery } from "./pages/Gallery";
 import { Contact } from "./pages/Contact";
 import ErrorPage from "./pages/Others/errorPage";
 import Navbar from "./components/Navbar/Navbar";
+import { Register } from "./pages/User Pages/register";
 
 function App() {
   return (
@@ -23,6 +24,11 @@ function App() {
           <Route path='/blog' element={<Blog/>} />
           <Route path='/gallery' element={<Gallery/>} />
           <Route path='/contact' element={<Contact/>} />
+
+          {/*Registeration Pages */}
+          <Route path='/signup' element={<Register/>} />
+
+          {/*Others */}
           <Route path='*' element={<ErrorPage/>} />
         </Routes>
       </Router>
