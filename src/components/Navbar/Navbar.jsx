@@ -19,20 +19,26 @@ function Navbar() {
         <div className='navbar'>
           <div className='first-bar'> 
             <Link to="/">
-              <img src={require('../../img/logo.jpeg')} alt="TPEC logo" srcset="" className='nav-logo'/>
+              <img src={require('../../assets/img/logo.jpeg')} alt="TPEC logo" srcset="" className='nav-logo'/>
             </Link>
           </div>
 
           <div className="second-bar">
             <div className='first-row-nav'>
-              <li className="nav-text">
-                <BsTelephoneFill/>
-                <span> + 601 8232 2011</span>
-              </li>
-              <li className="nav-text">
-                <AiOutlineMail style={{ fontSize: '140%' }}/>
-                <span> thepeaceedu@gmail.com</span>
-              </li>
+              <div className='nav-text-col'>
+                <li className="nav-text">
+                  <BsTelephoneFill/>
+                  <span> + 601 8232 2011</span>
+                </li>
+                <li className="nav-text">
+                  <AiOutlineMail style={{ fontSize: '140%' }}/>
+                  <span> thepeaceedu@gmail.com</span>
+                </li>
+              </div>
+
+              <div className="first-row-sos">
+                
+              </div>
             </div>
 
             <div className='second-row-nav'>
