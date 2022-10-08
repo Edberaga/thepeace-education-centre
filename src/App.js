@@ -2,7 +2,7 @@ import React from "react";
 import './App.css'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 //import the pages
-import { Home } from './pages/Home'
+import { Home } from './pages/Home/Home'
 import { About } from "./pages/About";
 import { Blog } from "./pages/Blog";
 import { Donation } from "./pages/Donation";
