@@ -1,21 +1,48 @@
+/*=========== BANNER CSS ============*/
 .banner{
+    background: linear-gradient(rgba(0,0,0,0.44), rgba(0,0,0,0.79)), url(../../assets/img/banner.jpg);
+    background-size: cover;  
     width:100%;
     height: 800px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../assets/img/banner.jpg');
-    background-size: cover;
-}
-
-.banner::before {
-    content: " ";
-	position: absolute;
-    filter: brightness(50%);
+    flex-flow: column;
+    color: #fff;
 }
 
 .banner-title{
-    filter: brightness(100%);
-    font-size: 72px;
-    color: #fff;
+    font-size: 85px;
+    font-weight: 300;
 }
+
+.banner-quote{
+    margin-top: 10px;
+    font-family: var(--quoteFont);
+    font-size: 26px;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.35em;
+}
+
+.banner-quote span{
+    margin: 0;
+}
+
+.banner-quote-1{color: var(--second-color);} .banner-quote-2{color: var(--primary-color);}
+
+.banner-btns {
+    display: flex;
+    justify-content: space-around;
+    width: 30vw;
+    margin-top: 25px;
+}
+
+.btn-volunteer-now svg{font-size: 22px;} .btn-learn-more svg{font-size: 27px;}
+
+.btn-volunteer-now {border: 1px solid var(--primary-color);} .btn-learn-more {border: 1px solid var(--second-color);}
+.btn-volunteer-now:hover {background-color: var(--primary-color); transform: scale(1.05);} 
+.btn-learn-more:hover {background-color: var(--second-color); transform: scale(1.05);}
+
+/*=========== FEATURE ONE CSS ============*/
