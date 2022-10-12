@@ -1,6 +1,6 @@
 /*=========== BANNER CSS ============*/
 .banner{
-    background: linear-gradient(rgba(0,0,0,0.44), rgba(0,0,0,0.79)), url(../../assets/img/banner.jpg);
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.68)), url(../../assets/img/banner.jpg);
     background-size: cover;  
     width:100%;
     height: 800px;
@@ -46,3 +46,7 @@
 .btn-learn-more:hover {background-color: var(--second-color); transform: scale(1.05);}
 
 /*=========== FEATURE ONE CSS ============*/
+
+
+.icon-col {width: 90px; transition: 0.3s;}
+.icon-col:hover {transform: scale(1.1);}
