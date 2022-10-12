@@ -39,3 +39,7 @@ button a{
   align-items: center;
   transition: 0.28s ease-in;
 }
+
+.container{
+  margin: auto;
+}
