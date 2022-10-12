@@ -3,6 +3,7 @@ import './Home.css';
 import {FaHandsHelping} from 'react-icons/fa'
 import {MdReadMore} from 'react-icons/md'
 import { Link } from "react-router-dom";
+import { HomeData } from "./HomeData";
 
 export const Home = () => {
     return (
@@ -32,7 +33,28 @@ export const Home = () => {
             </header>
 
             <section className="feature-one">
-                
+                <div className="container">
+                    <section className="feature-row">
+                        {HomeData.map((record, index) => {
+                            return (
+                                <div key={index} className="feature-col" >
+                                    <div className="first-col">
+                                        <img src={record.image} alt={record.title} className={record.class}/>
+                                        <h4 className="col-title">{record.title}</h4>
+                                    </div>
+                                    <div className="col-word">
+                                        <p className="col-text">{record.word}</p>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </section>
+                </div>
+            </section>
+
+            {/*Feature Two Section */}
+            <section>
+                <p>Hello</p>
             </section>
         </>
     )
