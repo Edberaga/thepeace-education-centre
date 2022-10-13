@@ -13,7 +13,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Rubik', sans-serif;
+    font-family: var(--primaryFont);
+    font-weight: 400;
+}
+
+p {
+  font-family: var(--secondFont);
+  font-weight: 900;
 }
 
 body{
@@ -42,4 +48,6 @@ button a{
 
 .container{
   margin: auto;
+  display: flex;
+  justify-content: center;
 }
