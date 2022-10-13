@@ -12,10 +12,7 @@
     color: #fff;
 }
 
-.banner-title{
-    font-size: 85px;
-    font-weight: 300;
-}
+.banner-title{font-size: 85px;font-weight: 300;}
 
 .banner-quote{
     margin-top: 10px;
@@ -26,10 +23,7 @@
     line-height: 1.35em;
 }
 
-.banner-quote span{
-    margin: 0;
-}
-
+.banner-quote span{margin: 0;}
 .banner-quote-1{color: var(--second-color);} .banner-quote-2{color: var(--primary-color);}
 
 .banner-btns {
@@ -47,6 +41,33 @@
 
 /*=========== FEATURE ONE CSS ============*/
 
+.icon-col {
+    width: 100px; 
+    transition: 0.3s; 
+    margin: 0 15px 10px 0; padding: 20px; padding-top: 30px;
+    background-position: center; background-size: contain; background-repeat: no-repeat;
+}
 
-.icon-col {width: 90px; transition: 0.3s;}
-.icon-col:hover {transform: scale(1.1);}
+.icon-col:hover {transform: scale(1.05); margin: 5px 15px 10px 0;}
+
+.feature-row{
+    width: 75vw;
+    background-color: #fff;
+    padding: 3% 2%;
+    margin-top: -7.5vh;
+    border-radius: 10px;
+    display: flex; justify-content: space-around; align-items: center;
+}
+
+.feature-col{display: flex; flex-flow: column; width: 300px;}
+.first-col{display: flex;align-items: center;}
+.col-title{font-size: 22px; line-height: 1.25em;}
+.col-text{
+    line-height: 1.75em; 
+    opacity: 0.7;
+    font-size: 18px;
+}
+
+.red-col {background-image: url('../../assets/img/three_iocn_box_bg.png');}
+.blue-col {background-image: url('../../assets/img/three_iocn_box_bg-2.png'); padding: 25px;}
+.green-col {background-image: url('../../assets/img/three_iocn_box_bg-3.png'); padding: 25px; }

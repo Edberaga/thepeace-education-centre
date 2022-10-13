@@ -40,7 +40,7 @@ export const Home = () => {
                                 <div key={index} className="feature-col" >
                                     <div className="first-col">
                                         <img src={record.image} alt={record.title} className={record.class}/>
-                                        <h4 className="col-title">{record.title}</h4>
+                                        <h1 className="col-title">{record.title}</h1>
                                     </div>
                                     <div className="col-word">
                                         <p className="col-text">{record.word}</p>
