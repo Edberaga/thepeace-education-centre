@@ -44,17 +44,17 @@
 .icon-col {
     width: 100px; 
     transition: 0.3s; 
-    margin: 0 15px 10px 0; padding: 20px; padding-top: 30px;
+    margin-right: 15px; padding: 20px;
     background-position: center; background-size: contain; background-repeat: no-repeat;
 }
 
 .icon-col:hover {transform: scale(1.05); margin: 5px 15px 10px 0;}
 
-.feature-row{
-    width: 75vw;
+.feature-one{
+    width: 100%;
     background-color: #fff;
     padding: 3% 2%;
-    margin-top: -7.5vh;
+    margin-top: -24vh;
     border-radius: 10px;
     display: flex; justify-content: space-around; align-items: center;
 }
@@ -62,12 +62,23 @@
 .feature-col{display: flex; flex-flow: column; width: 300px;}
 .first-col{display: flex;align-items: center;}
 .col-title{font-size: 22px; line-height: 1.25em;}
-.col-text{
-    line-height: 1.75em; 
-    opacity: 0.7;
-    font-size: 18px;
-}
 
 .red-col {background-image: url('../../assets/img/three_iocn_box_bg.png');}
-.blue-col {background-image: url('../../assets/img/three_iocn_box_bg-2.png'); padding: 25px;}
-.green-col {background-image: url('../../assets/img/three_iocn_box_bg-3.png'); padding: 25px; }
+.blue-col {background-image: url('../../assets/img/three_iocn_box_bg-2.png'); padding: 27.5px;}
+.green-col {background-image: url('../../assets/img/three_iocn_box_bg-3.png'); padding: 25px;}
+
+/*=========== FEATURE TWO CSS ============*/
+.section-image{border-radius: 10px;}
+.section-img, .section-word{width: 50%;}
+.background-image{
+    position: absolute;
+    width: 500px; 
+    height: 333px;
+    background-color: var(--primary-color);
+    margin: 12.5px 0 0 -12.5px ;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.section-word h1{font-size: 42px;} 
+.section-word h2{font-family: var(--quoteFont); color: var(--primary-color);}
