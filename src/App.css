@@ -49,6 +49,7 @@ button a{
 .container{
   margin: 15vh auto;
   display: flex;
+  flex-flow: row wrap;
   width: 80%;
 }
 
@@ -57,6 +58,10 @@ p{
   line-height: 2em; 
   opacity: 0.7;
   font-size: 18px;
+}
+
+span {
+  margin: 0 12px;
 }
 
 .marked {color: var(--second-color); margin-left: 0;}
