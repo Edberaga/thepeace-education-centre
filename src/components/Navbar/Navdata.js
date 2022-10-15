@@ -20,7 +20,7 @@ export const SidebarData = [
   },
   {
     title: 'Donate',
-    path: '/donation',
+    path: '/donate',
     icon: <BiDonateHeart />,
     cName: 'nav-text nav-donate'
   },
