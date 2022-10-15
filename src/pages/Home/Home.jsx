@@ -84,8 +84,8 @@ export const Home = () => {
                         <p>{Quote["about-school"]}</p>
                         <div className="banner-btns">
                             <button className="btn-learn-more">
-                                <Link to="./about">
-                                    <span>Learn More</span>
+                                <Link to="./donate">
+                                    <span>Donate</span>
                                     <BsSuitHeartFill/>
                                 </Link>
                             </button>

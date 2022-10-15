@@ -95,8 +95,10 @@
 .video-title{font-family: var(--quoteFont); color: rgb(227, 238, 236); text-align: center; padding: 10px 0;}
 
 .feature-three .section-word{color: #fff;}
+.feature-three .btn-learn-more a{color: var(--second-color);}
+.feature-three .btn-learn-more a:hover{color: white}
 .feature-three .btn-learn-more, .feature-three .btn-volunteer-now{border-radius: 0;}
-.feature-three .btn-learn-more svg, .feature-three .btn-volunteer-now svg {font-size: 18px;}
+.feature-three .btn-learn-more svg, .feature-three .btn-volunteer-now svg {font-size: 15px;}
 
 .feature-three .btn-volunteer-now{ border-color: white; background-color: transparent;} 
 .feature-three .btn-volunteer-now a{border-radius: 0;} .feature-three .btn-volunteer-now:hover{border-color: transparent;}
