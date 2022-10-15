@@ -151,10 +151,6 @@
   transition: 350ms;
 }
 
-span {
-  margin-left: 16px;
-}
-
 /******TABLET RESPONSIVE******/
 @media screen and (max-width: 900px){
   .nav-links-destkop {
