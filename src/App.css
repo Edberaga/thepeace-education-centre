@@ -47,11 +47,14 @@ button a{
 }
 
 .container{
-  margin: 15vh auto;
+  margin: 12.5vh auto;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   width: 80%;
 }
+
+.section{padding: 15px;}
 
 p{
   margin: 2.5vh 0;
@@ -60,8 +63,14 @@ p{
   font-size: 18px;
 }
 
-span {
-  margin: 0 12px;
-}
+span {margin: 0 12px;}
 
 .marked {color: var(--second-color); margin-left: 0;}
+
+@media screen and (max-width: 900px) {
+  .container{width: 100%; padding: 10px; margin: 10vh auto}
+}
+
+@media screen and (max-width: 500px) {
+  .container{margin: 5vh auto}
+}

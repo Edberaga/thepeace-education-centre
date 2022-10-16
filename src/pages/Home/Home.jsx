@@ -8,6 +8,8 @@ import { HomeData } from "./HomeData";
 import Quote from "../../common.json";
 import ReactPlayer from "react-player";
 
+let factor = 30; // to make react player to be responsive
+
 export const Home = () => {
     return (
         <>
@@ -60,11 +62,10 @@ export const Home = () => {
         {/*Feature Two Section */}
             <section className="feature-two">
                 <div className="container">
-                    <div className="section-img">
-                        <div className="background-image"></div>
+                    <div className="section section-img">
                         <img src={require('../../assets/img/section.jpg')} className="section-image" alt="The Peace Education Centre Students" srcset="" />
                     </div>
-                    <div className="section-word">
+                    <div className="section section-word">
                         <h2>About Us</h2>
                         <h1>Our Goal is to <span className="marked">Educated</span><br/>Refugee Children</h1>
                         <p>{Quote["our-goal"]}</p>
@@ -75,11 +76,17 @@ export const Home = () => {
         {/*Feature Three Section */}
             <section className="container container-three">
                 <div className="feature-three">
-                    <div className="section-video">
-                        <h2 className="video-title">Welcome To The Peace Education Centre</h2>
-                        <ReactPlayer className="section-video" controls url={'https://www.youtube.com/watch?v=iOLs5_f7ejA&t=19s'}/>
+                    <div className="section section3-video">
+                        <h2>Welcome To The Peace Education Centre</h2>
+                        <ReactPlayer 
+                            className="section-video" 
+                            controls 
+                            url={'https://www.youtube.com/watch?v=iOLs5_f7ejA&t=19s'}
+                            width={factor*16}
+                            height={factor*9}
+                        />
                     </div>
-                    <div className="section-word">
+                    <div className="section section3-word">
                         <h1>Join Our Mission to <span className="marked">Help</span><br/>the Children</h1>
                         <p>{Quote["about-school"]}</p>
                         <div className="banner-btns">

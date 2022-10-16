@@ -1,9 +1,11 @@
 /*=========== BANNER CSS ============*/
 .banner{
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.68)), url(../../assets/img/banner.jpg);
-    background-size: cover;  
-    width:100%;
-    height: 800px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.68)), url(../../assets/img/banner.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    width: 100%;
+    height: 120vh;
 
     display: flex;
     justify-content: center;
@@ -12,28 +14,32 @@
     color: #fff;
 }
 
-.banner-title{font-size: 85px;font-weight: 300;}
+.banner-title{font-size: 5vw;font-weight: 300;transition: 0.5s;}
 
 .banner-quote{
     margin-top: 10px;
     font-family: var(--quoteFont);
-    font-size: 26px;
+    font-size: 2vw;
     text-align: center;
     letter-spacing: 2px;
     line-height: 1.35em;
 }
 
+.banner-title:hover, .banner-quote:hover{opacity: 0.35;}
+
 .banner-quote span{margin: 0;}
 .banner-quote-1{color: var(--second-color);} .banner-quote-2{color: var(--primary-color);}
 
 .banner-btns {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    width: 30vw;
+    justify-content: center;
+    flex-flow: row wrap;
     margin-top: 25px;
 }
 
 .btn-volunteer-now svg{font-size: 22px;} .btn-learn-more svg{font-size: 27px;}
+.btn-learn-more, .btn-volunteer-now{margin: 25px; margin-top: 0;}
 
 .btn-volunteer-now {border: 1px solid var(--primary-color);} .btn-learn-more {border: 1px solid var(--second-color);}
 .btn-volunteer-now:hover {background-color: var(--primary-color); transform: scale(1.05);} 
@@ -52,11 +58,12 @@
 
 .section-one{
     width: 100%;
+    height: auto;
     background-color: #fff;
     padding: 3% 2%;
     margin-top: -24vh;
     border-radius: 10px;
-    display: flex; justify-content: space-around; align-items: center;
+    display: flex; justify-content: space-around; align-items: center; flex-flow: wrap;
 }
 
 .feature-col{display: flex; flex-flow: column; width: 300px;}
@@ -68,35 +75,40 @@
 .green-col {background-image: url('../../assets/img/three_iocn_box_bg-3.png'); padding: 25px;}
 
 /*=========== FEATURE TWO CSS ============*/
-.section-image{border-radius: 10px; margin-left: 12.5px;}
-.section-img, .section-word{width: 50%;}
-.background-image{
-    position: absolute;
-    width: 500px; 
-    height: 333px;
-    background-color: var(--primary-color);
-    margin-top: 12.5px;
-    z-index: -1;
-    border-radius: 10px;
+.section-image{
+    border-radius: 10px;     
+    width: fit-content;
+    text-align: center;
+    height: 40vh;
 }
+
+.section-image{box-shadow: -15px 15px 0 0 var(--primary-color);}
+
+.section-img, .section-word{flex: 1;}
+.section-img{width: auto;}
 
 .section-word h1{font-size: 42px;} 
 .section-word h2{font-family: var(--quoteFont); color: var(--primary-color);}
 
 /*=========== FEATURE THREE CSS ============*/
-.container-three{width: 100%;background-color: var(--primary-color); display: flex; justify-content: center; margin-bottom: 0;}
+.container-three{width: 100%; background-color: var(--primary-color); display: flex; justify-content: center; margin-bottom: 0;}
 .feature-three{
     width: 80%;
     padding: 3em 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
-.feature-three .section-video{margin-right: 25px; border-radius: 15px;}
-.video-title{font-family: var(--quoteFont); color: rgb(227, 238, 236); text-align: center; padding: 10px 0;}
+.section3-video h2{font-family: var(--quoteFont); color: rgb(227, 238, 236); text-align: center; padding: 10px 0;}
 
-.feature-three .section-word{color: #fff;}
+.section3-video, .section3-word {flex: 1;}
+
+.section-video{width: auto;}
+.section3-word{color: #fff;} .section3-word h1 {font-size: 42px;}
+
 .feature-three .btn-learn-more a{color: var(--second-color);}
 .feature-three .btn-learn-more a:hover{color: white}
+
 .feature-three .btn-learn-more, .feature-three .btn-volunteer-now{border-radius: 0;}
 .feature-three .btn-learn-more svg, .feature-three .btn-volunteer-now svg {font-size: 15px;}
 
@@ -106,4 +118,30 @@
     background-color: white; 
     color: black;
     border-radius: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .section-img, .section-word{flex: 1;}
+    .banner{height: 75vh; padding: 10px;}
+    .banner-title{font-size: 7.5vw;} 
+
+    /*=========== FEATURE TWO CSS ============*/
+    .section-word h1{font-size: 3vw;}
+    .section-img{ text-align: center;}
+
+    /*=========== FEATURE THREE CSS ============*/
+    .feature-three{width: 100%; padding: 0; justify-content: center;}
+}
+@media screen and (max-width: 540px) {
+    .banner{height: 50vh; padding: 10px;}
+    .banner-quote{font-size: 3.5vw;}
+    
+    /*=========== FEATURE TWO CSS ============*/
+    .section-word h1, .section3-word{font-size: 7vw;}
+    .section-image, .section-img-bg{ text-align: center;}
+
+    .btn-volunteer-now svg{font-size: 3.5vw;} .btn-learn-more svg{font-size: 4.5vw;}
+    .btn-learn-more a, .btn-volunteer-now a{font-size: 2.5vw;}
+
+    .feature-three{width: 100%;}
 }
