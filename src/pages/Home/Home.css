@@ -99,6 +99,8 @@
     flex-wrap: wrap;
 }
 
+.section3-video{text-align: center;}
+
 .section3-video h2{font-family: var(--quoteFont); color: rgb(227, 238, 236); text-align: center; padding: 10px 0;}
 
 .section3-video, .section3-word {flex: 1;}
