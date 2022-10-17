@@ -1,9 +1,9 @@
 /*=========== BANNER CSS ============*/
+.feature-one, .feature-two {background-color: rgb(227, 238, 236);}
 .banner{
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.68)), url(../../assets/img/banner.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
-
     width: 100%;
     height: 120vh;
 
@@ -23,6 +23,7 @@
     text-align: center;
     letter-spacing: 2px;
     line-height: 1.35em;
+    transition: 0.5s;
 }
 
 .banner-title:hover, .banner-quote:hover{opacity: 0.35;}
@@ -57,8 +58,7 @@
 .icon-col:hover {transform: scale(1.05); margin: 5px 15px 10px 0;}
 
 .section-one{
-    width: 100%;
-    height: auto;
+    width: fit-content;
     background-color: #fff;
     padding: 3% 2%;
     margin-top: -24vh;
@@ -66,7 +66,7 @@
     display: flex; justify-content: space-around; align-items: center; flex-flow: wrap;
 }
 
-.feature-col{display: flex; flex-flow: column; width: 300px;}
+.feature-col{display: flex; flex-flow: column; width: 350px; margin: 15px;}
 .first-col{display: flex;align-items: center;}
 .col-title{font-size: 22px; line-height: 1.25em;}
 
@@ -75,10 +75,10 @@
 .green-col {background-image: url('../../assets/img/three_iocn_box_bg-3.png'); padding: 25px;}
 
 /*=========== FEATURE TWO CSS ============*/
+.feature-two{padding-bottom: 10vh;}
 .section-image{
     border-radius: 10px;     
-    width: fit-content;
-    text-align: center;
+    width: auto;
     height: 40vh;
 }
 
@@ -94,15 +94,11 @@
 .container-three{width: 100%; background-color: var(--primary-color); display: flex; justify-content: center; margin-bottom: 0;}
 .feature-three{
     width: 80%;
-    padding: 3em 0;
     display: flex;
     flex-wrap: wrap;
 }
 
-.section3-video{text-align: center;}
-
 .section3-video h2{font-family: var(--quoteFont); color: rgb(227, 238, 236); text-align: center; padding: 10px 0;}
-
 .section3-video, .section3-word {flex: 1;}
 
 .section-video{width: auto;}
@@ -122,7 +118,11 @@
     border-radius: 0;
 }
 
+/*=========== FEATURE FOUR CSS ============*/
+.section-question, .section4-image{flex: 1;}
+
 @media screen and (max-width: 900px) {
+    .section-one{width: 80%;} .feature-col{width: 280px;}
     .section-img, .section-word{flex: 1;}
     .banner{height: 75vh; padding: 10px;}
     .banner-title{font-size: 7.5vw;} 
@@ -130,13 +130,21 @@
     /*=========== FEATURE TWO CSS ============*/
     .section-word h1{font-size: 3vw;}
     .section-img{ text-align: center;}
+    .section-image{ height: 30vh;}
 
     /*=========== FEATURE THREE CSS ============*/
     .feature-three{width: 100%; padding: 0; justify-content: center;}
+    .section3-word h1{font-size: 30px;}
+    .section3-video{max-width: 420px}
+
+    .section3-word .btn-learn-more, .section3-word .btn-volunteer-now{margin: 10px 0.75vw;}
+    .section3-word .btn-learn-more a, .section3-word .btn-volunteer-now a{padding: 10px 8px; font-size: 15px;}
+    
 }
 @media screen and (max-width: 540px) {
     .banner{height: 50vh; padding: 10px;}
     .banner-quote{font-size: 3.5vw;}
+    .section-one{margin-top: -12vh;} 
     
     /*=========== FEATURE TWO CSS ============*/
     .section-word h1, .section3-word{font-size: 7vw;}
@@ -145,5 +153,11 @@
     .btn-volunteer-now svg{font-size: 3.5vw;} .btn-learn-more svg{font-size: 4.5vw;}
     .btn-learn-more a, .btn-volunteer-now a{font-size: 2.5vw;}
 
+    /*=========== FEATURE THREE CSS ============*/
     .feature-three{width: 100%;}
+    .feature-three .section{padding: 0;}
+
+    .section3-video{max-width: 400px}
+    .section3-word .btn-learn-more, .section3-word .btn-volunteer-now{margin: 10px;}
+    .section3-word .btn-learn-more a, .section3-word .btn-volunteer-now a{padding: 10px 12px; font-size: 16px;}
 }

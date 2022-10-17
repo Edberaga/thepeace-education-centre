@@ -8,7 +8,7 @@ import { HomeData } from "./HomeData";
 import Quote from "../../common.json";
 import ReactPlayer from "react-player";
 
-let factor = 30; // to make react player to be responsive
+let factor = 32; // to make react player to be responsive
 
 export const Home = () => {
     return (
@@ -78,13 +78,18 @@ export const Home = () => {
                 <div className="feature-three">
                     <div className="section section3-video">
                         <h2>Welcome To The Peace Education Centre</h2>
-                        <ReactPlayer 
-                            className="section-video" 
-                            controls 
-                            url={'https://www.youtube.com/watch?v=iOLs5_f7ejA&t=19s'}
-                            width={factor*16}
-                            height={factor*9}
-                        />
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                        }}>                      
+                            <ReactPlayer 
+                                className="section-video" 
+                                controls 
+                                url={'https://www.youtube.com/watch?v=iOLs5_f7ejA&t=19s'}
+                                width={factor*16}
+                                height={factor*9}
+                            />
+                        </div>
                     </div>
                     <div className="section section3-word">
                         <h1>Join Our Mission to <span className="marked">Help</span><br/>the Children</h1>
@@ -108,9 +113,14 @@ export const Home = () => {
             </section>
 
         {/*Feature Three Section */}
-            <section className="feature">
+            <section className="feature-four">
                 <div className="container">
-                    
+                    <div className="section section-question">
+                        <p>Test</p>
+                    </div>
+                    <div className="section section4-image">
+                        <p></p>
+                    </div>
                 </div>
             </section>
         </>
