@@ -23,7 +23,7 @@ p {
 }
 
 body{
-  background-color: rgb(227, 238, 236);
+  background-color: rgb(245, 252, 250);
 }
 
 button {
@@ -47,30 +47,30 @@ button a{
 }
 
 .container{
-  margin: 12.5vh auto;
+  padding: 5vh 0;
+  margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   width: 80%;
 }
 
-.section{padding: 15px;}
+.section{padding: 15px;} .section-center{display: flex; justify-content: center;}
 
 p{
   margin: 2.5vh 0;
   line-height: 2em; 
-  opacity: 0.7;
+  opacity: 0.85;
   font-size: 18px;
 }
 
 span {margin: 0 12px;}
 
-.marked {color: var(--second-color); margin-left: 0;}
+.marked {color: var(--second-color); margin: 0;}
 
 @media screen and (max-width: 900px) {
-  .container{width: 100%; padding: 10px; margin: 10vh auto}
+  .container{width: 100%; }
 }
 
 @media screen and (max-width: 500px) {
-  .container{margin: 5vh auto}
 }
