@@ -89,16 +89,16 @@
     box-shadow: 0 0 1px 3px rgba(0, 147, 103, 0.35);
   }
 
+  button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 1px 3px rgba(0, 147, 103, 0.35);
+}
+
 /*add custom carousel dots color*/
 @media screen and (max-width: 900px) {
     button.rec-dot{
         background-color: gray;
         box-shadow: none;
-    }
-
-    button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
-        background-color: var(--primary-color);
-        box-shadow: 0 0 1px 3px rgba(0, 147, 103, 0.35);
     }
 }
 
