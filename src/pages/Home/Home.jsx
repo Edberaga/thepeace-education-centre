@@ -1,14 +1,28 @@
 import React from "react";
 import './Home.css';
+import './Review/ReviewCard.css';
 import {FaHandsHelping} from 'react-icons/fa'
 import {MdReadMore} from 'react-icons/md'
 import {BsSuitHeartFill} from 'react-icons/bs'
 import { Link } from "react-router-dom";
-import { HomeData } from "./HomeData";
+
 import Quote from "../../common.json";
 import ReactPlayer from "react-player";
+import Carousel from 'react-elastic-carousel';
+
+import { HomeData } from "./HomeData";
+import { ReviewData } from "./Review/ReviewData";
+import 'font-awesome/css/font-awesome.min.css';
 
 let factor = 32; // to make react player to be responsive
+
+//For Carousel:
+const breakPoints = [
+    { width: 1, itemsToShow: 1},
+    { width:500, itemsToShow: 1},
+    { width:768, itemsToShow: 2},
+    { width:1000, itemsToShow: 3}
+];
 
 export const Home = () => {
     return (
@@ -112,15 +126,26 @@ export const Home = () => {
                 </div>
             </section>
 
-        {/*Feature Three Section */}
-            <section className="feature-four">
+        {/*Feature What They Say Section */}
+            <section className="feature-five">
                 <div className="container">
-                    <div className="section section-question">
-                        <p>Test</p>
+                    <div className="section section-word">
+                        <h2>Happy People</h2>
+                        <h1>What they say</h1>
                     </div>
-                    <div className="section section4-image">
-                        <p></p>
-                    </div>
+                    <Carousel breakPoints={breakPoints} className="review-carousel">           
+                        {ReviewData.map((review, index) => {
+                            return (
+                                <article class="review" key={index}>
+                                    <div class="review-container">
+                                        <img src={review.image} className="review-img" alt="" />
+                                    </div>
+                                    <p className="review-info">{review.word}</p>
+                                    <h4 className="author">- {review.title}</h4>
+                                </article>
+                            );
+                        })}
+                    </Carousel>
                 </div>
             </section>
         </>
