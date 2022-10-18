@@ -121,6 +121,11 @@
 /*=========== FEATURE FOUR CSS ============*/
 .section-question, .section4-image{flex: 1;}
 
+/*=========== FEATURE FIVE CSS ============*/
+.feature-five .container{width: 100%;}
+.feature-five .section-word{text-align: center;}
+.review-carousel{padding: 15px;}
+
 @media screen and (max-width: 900px) {
     .section-one{width: 80%;} .feature-col{width: 280px;}
     .section-img, .section-word{flex: 1;}
@@ -155,9 +160,10 @@
 
     /*=========== FEATURE THREE CSS ============*/
     .feature-three{width: 100%;}
-    .feature-three .section{padding: 0;}
 
     .section3-video{max-width: 400px}
     .section3-word .btn-learn-more, .section3-word .btn-volunteer-now{margin: 10px;}
     .section3-word .btn-learn-more a, .section3-word .btn-volunteer-now a{padding: 10px 12px; font-size: 16px;}
+
+    .review-carousel{padding: 5px;}
 }
