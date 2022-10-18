@@ -68,6 +68,8 @@ span {margin: 0 12px;}
 
 .marked {color: var(--second-color); margin: 0;}
 
+
+
 @media screen and (max-width: 900px) {
   .container{width: 100%; }
 }
