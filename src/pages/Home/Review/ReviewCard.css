@@ -3,13 +3,13 @@
     padding: 3rem 2rem;
     margin: 2rem 15px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: 0.5 ease;
+    box-shadow: var(--lightShadow);
+    transition: var(--fastTrans);
     text-align: center;
 }
 
 .review:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--darkShadow);
 }
   
 .review-container {
@@ -101,7 +101,6 @@
         box-shadow: none;
     }
 }
-
 
 @media screen and (max-width: 500px) {
     .rec.rec-arrow {
