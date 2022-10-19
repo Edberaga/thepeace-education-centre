@@ -1,7 +1,7 @@
 import React from "react";
 import './Home.css';
 import './Review/ReviewCard.css';
-import {FaHandsHelping} from 'react-icons/fa'
+import {FaHandsHelping, FaHeart} from 'react-icons/fa'
 import {MdReadMore} from 'react-icons/md'
 import {BsSuitHeartFill} from 'react-icons/bs'
 import { Link } from "react-router-dom";
@@ -13,6 +13,7 @@ import Carousel from 'react-elastic-carousel';
 import { HomeData } from "./HomeData";
 import { ReviewData } from "./Review/ReviewData";
 import 'font-awesome/css/font-awesome.min.css';
+import Blog1img from '../../assets/img/blog-1.jpg';
 
 let factor = 32; // to make react player to be responsive
 
@@ -148,6 +149,106 @@ export const Home = () => {
                     </Carousel>
                 </div>
             </section>
+
+            {/*Feature 6 Join Us Section */}
+            <section className="feature-six">
+                <div className="container">
+                    <div className="section section-word">
+                        <img src={require("../../assets/img/logo_hand.png")} width="90px" alt="T-PEC Logo" srcset="" />
+                        <h2>Join to Educate the Children!</h2>
+                        <button className="btn-join">
+                            <Link to="./contact">
+                                Become Volunteer
+                            </Link>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            {/*Feature 7 Blog Section */}
+            <section className="feature-seven">
+                <section className="first-container">     
+                    <div className="container">
+                        <div className="section section-word">
+                            <h2>From the Blog</h2>
+                            <h1>News & Articles</h1>
+                        </div>
+                        <div className="section section-desc">
+                            <p>{Quote["news-school"]}</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="second-container">
+                    <div className="container">
+                        <Link>             
+                            <div className="news-card">
+                                <div className="news-image" style={{backgroundImage: `url(${Blog1img})`} }>
+                                </div>
+                                <div className="news-word">
+                                    <p className="news-date">21/9/2020</p>
+                                    <h1>Welcome to the T-PEC Blog!</h1>
+                                    <p>This is the start of a bulletin that will include important information 
+                                        about current events at T-PEC, updates on future activity, as well as student blogs!
+                                    </p>
+                                </div>
+                                <div className="news-media">
+                                    <p className="news-comment">
+                                        <span>0</span> comments
+                                    </p>
+                                    <p className="news-like">
+                                        <FaHeart/> <span>0</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>
+                        <Link>             
+                            <div className="news-card">
+                                <div className="news-image" style={{backgroundImage: `url(${Blog1img})`} }>
+                                </div>
+                                <div className="news-word">
+                                    <p className="news-date">21/9/2020</p>
+                                    <h1>Welcome to the T-PEC Blog!</h1>
+                                    <p>This is the start of a bulletin that will include important information 
+                                        about current events at T-PEC, updates on future activity, as well as student blogs!
+                                    </p>
+                                </div>
+                                <div className="news-media">
+                                    <p className="news-comment">
+                                        <span>0</span> comments
+                                    </p>
+                                    <p className="news-like">
+                                        <FaHeart/> <span>0</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>
+                        <Link>             
+                            <div className="news-card">
+                                <div className="news-image" style={{backgroundImage: `url(${Blog1img})`} }>
+                                </div>
+                                <div className="news-word">
+                                    <p className="news-date">21/9/2020</p>
+                                    <h1>Welcome to the T-PEC Blog!</h1>
+                                    <p>This is the start of a bulletin that will include important information 
+                                        about current events at T-PEC, updates on future activity, as well as student blogs!
+                                    </p>
+                                </div>
+                                <div className="news-media">
+                                    <p className="news-comment">
+                                        <span>0</span> comments
+                                    </p>
+                                    <p className="news-like">
+                                        <FaHeart/> <span>0</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                </section>
+            </section>
+
+            
         </>
     )
 }
