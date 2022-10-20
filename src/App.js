@@ -11,6 +11,7 @@ import { Contact } from "./pages/Contact";
 import ErrorPage from "./pages/Others/errorPage";
 import Navbar from "./components/Navbar/Navbar";
 import { Register } from "./pages/User Pages/register";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           {/*Others */}
           <Route path='*' element={<ErrorPage/>} />
         </Routes>
+        <Footer/>
       </Router>
     </>
   );
