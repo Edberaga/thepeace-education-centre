@@ -1,17 +1,23 @@
 footer{
     width: 100%;
-    min-height: 40vh;
     background-color: var(--primary-color);
-    display: flex; justify-content: center; align-items: center;
+    display: flex; justify-content: center; align-items: flex-start;
     flex-wrap: wrap;
     margin-top: 10vh;
-    padding: 10px 5%;
+    padding: 7.5vh 5%;
 }
 
 .footer-col{
     flex: 1;
-    min-width: 250px;
-    background-color: aliceblue;
-    padding: 15px;
-    margin: 15px;
+    min-width: 320px;
+    margin: 10px;
 }
+
+.footer-col p{font-size: 15px; font-family: var(--secondFont);}
+
+.footer-nav-menu{
+    padding: 10px 0;
+}
+
+.footer-nav, .footer-nav-contact{list-style: none;}
+.footer-nav span{margin: 0;}
