@@ -8,9 +8,9 @@
   --secondFont: 'Lato', sans-serif;
   --quoteFont: 'Edu VIC WA NT Beginner', cursive;
 
-  --fastTrans: 0.12s ease-in;
-  --mediumTrans: 0.28s ease-in;
-  --longTrans: 0.56s ease-in;
+  --fastTrans: 0.16s ease-in;
+  --mediumTrans: 0.38s ease-in;
+  --longTrans: 0.76s ease-in;
   --lightShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --darkShadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }
