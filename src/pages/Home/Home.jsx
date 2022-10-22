@@ -83,7 +83,7 @@ export const Home = () => {
                     <div className="section section-word">
                         <h2>About Us</h2>
                         <h1>Our Goal is to <span className="marked">Educated</span><br/>Refugee Children</h1>
-                        <p>{Quote["our-goal"]}</p>
+                        <p>{Quote.hom}</p>
                     </div>
                 </div>
             </section>
