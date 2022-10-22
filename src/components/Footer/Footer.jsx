@@ -46,7 +46,6 @@ export const Footer = () =>{
         </div>
         <div className="footer-col col-4">
           <h2>Support</h2>
-          Quotes
           <p>{Quote['footer-support']}</p>
           <button className="footer-donate">
             <Link to='/donate'>
