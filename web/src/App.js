@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { Home } from './pages/Home/Home'
 import { About } from "./pages/About us/About";
 import { Blog } from "./pages/Blog";
-import { Donation } from "./pages/Donation";
+import { Donation } from "./pages/Donate/Donation";
 import { Gallery } from "./pages/Gallery";
 import { Contact } from "./pages/Contact";
 import ErrorPage from "./pages/Others/errorPage";
