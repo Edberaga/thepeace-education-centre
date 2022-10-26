@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import './Donation.css';
 
 export const Donation = () => {
+    const [showItem, setShowItem] = useState(false)
     return (
         <>
             <div className="container">
-                <h1 className="text-align">Donations</h1>
+                
             </div>
         </>
     )
