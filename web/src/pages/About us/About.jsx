@@ -11,7 +11,7 @@ export const About = () => {
                         <p>{Quote["our-goal-about"]}</p>
                     </div>
                     <div className="about-mission-2">
-                        <img src={require('../../assets/img/school_mission.jpeg')} className="about-mission-img" alt="" srcset="" />
+                        <img src={require('../../assets/img/school_mission.jpeg')} className="about-mission-img" alt="" />
                     </div>
                 </div>
             </section>
@@ -19,7 +19,7 @@ export const About = () => {
             <section className="about-history">
                 <div className="container">
                     <div className="about-history-1">
-                        <img src={require('../../assets/img/school_history.jpg')} className="about-history-img" alt="" srcset="" />
+                        <img src={require('../../assets/img/school_history.jpg')} className="about-history-img" alt="" />
                     </div>
                     <div className="about-history-2">
                         <h1>History</h1>

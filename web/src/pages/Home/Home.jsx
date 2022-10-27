@@ -78,7 +78,7 @@ export const Home = () => {
             <section className="feature-two">
                 <div className="container">
                     <div className="section section-img">
-                        <img src={require('../../assets/img/section.jpg')} className="section-image" alt="The Peace Education Centre Students" srcset="" />
+                        <img src={require('../../assets/img/section.jpg')} className="section-image" alt="The Peace Education Centre Students" />
                     </div>
                     <div className="section section-word">
                         <h2>About Us</h2>
@@ -154,7 +154,7 @@ export const Home = () => {
             <section className="feature-six">
                 <div className="container">
                     <div className="section section-word">
-                        <img src={require("../../assets/img/logo_hand.png")} width="90px" alt="T-PEC Logo" srcset="" />
+                        <img src={require("../../assets/img/logo_hand.png")} width="90px" alt="T-PEC Logo"/>
                         <h2>Join to Educate the Children!</h2>
                         <button className="btn-join">
                             <Link to="./contact">

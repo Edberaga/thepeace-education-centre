@@ -19,7 +19,7 @@ function Navbar() {
         <div className='navbar'>
           <div className='first-bar'> 
             <Link to="/">
-              <img src={require('../../assets/img/logo.jpeg')} alt="TPEC logo" srcset="" className='nav-logo'/>
+              <img src={require('../../assets/img/logo.jpeg')} alt="TPEC logo" className='nav-logo'/>
             </Link>
           </div>
 

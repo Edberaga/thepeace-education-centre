@@ -11,7 +11,7 @@ export const Footer = () =>{
     <footer>
         <div className="footer-col col-1">
             <Link to="/">
-              <img src={require('../../assets/img/logo.jpeg')} alt="TPEC logo" srcset="" className='nav-logo'/>
+              <img src={require('../../assets/img/logo.jpeg')} alt="TPEC logo" className='nav-logo'/>
             </Link>
             <p>{Quote['footer-summary']}</p>
         </div>
