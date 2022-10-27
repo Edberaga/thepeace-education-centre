@@ -60,13 +60,17 @@ button a{
   transition: var(--mediumTrans);
 }
 
-.container{
+.container, .container-full{
   padding: 5vh 0;
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   width: 80%;
+}
+
+.container-full{
+  width: 100%;
 }
 
 .section{padding: 15px;} .section-center{display: flex; justify-content: center;}
