@@ -1,14 +1,19 @@
-import React, {Component} from "react";
-import {Container} from 'reactstrap'
-import ArticleCard from "../../components/ArticleCard/ArticleCard";
-import firebase from "../../config/firebase";
-
-const db = firebase.firestore()
-
-import React from 'react'
+import React from "react";
+import Articles from "../../components/Article/Articles";
+import AddArticle from "../../components/Article/AddArticle";
 
 export const Blog = () => {
+
   return (
-    <div>Blog</div>
+    <>
+    <div className="container-full">
+        <div>
+            <Articles/>
+        </div>
+        <div>
+            <AddArticle/>
+        </div>
+    </div>
+    </>
   )
 }
