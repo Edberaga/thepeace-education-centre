@@ -9,14 +9,14 @@ import { BsSuitHeartFill } from 'react-icons/bs'
 export const Footer = () =>{
   return (
     <footer>
-        <div className="footer-col col-1">
+        <div className="footer-col">
             <Link to="/">
               <img src={require('../../assets/img/logo.jpeg')} alt="TPEC logo" className='nav-logo'/>
             </Link>
             <p>{Quote['footer-summary']}</p>
         </div>
 
-        <div className="footer-col col-2">
+        <div className="footer-col">
           <h2>Explore</h2>
           <ul className='footer-nav-menu'>
             {FooterData.map((item, index) => {
@@ -31,7 +31,7 @@ export const Footer = () =>{
           </ul>
         </div>
 
-        <div className="footer-col col-3">
+        <div className="footer-col">
           <h2>Contact</h2>
           <ul className='footer-nav-menu'>
             {ContactData.map((item, index) => {
@@ -44,7 +44,7 @@ export const Footer = () =>{
             })}
           </ul>
         </div>
-        <div className="footer-col col-4">
+        <div className="footer-col">
           <h2>Support</h2>
           <p>{Quote['footer-support']}</p>
           <button className="footer-donate">

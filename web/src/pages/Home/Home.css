@@ -118,12 +118,12 @@
 .section-question, .section4-image{flex: 1;}
 
 /*=========== FEATURE FIVE CSS ============*/
-.feature-five .container{width: 100%;}
+.feature-five .container-section{width: 100%;}
 .feature-five .section-word, .feature-six .section-word{text-align: center;}
 .review-carousel{padding: 15px;}
 
 /*=========== FEATURE SIX CSS ============*/
-.feature-six .container{width: 100%; background-color: var(--primary-color); display: flex; justify-content: center; margin-bottom: 0;}
+.feature-six .container-section{width: 100%; background-color: var(--primary-color); display: flex; justify-content: center; margin-bottom: 0;}
 .feature-six .section-word h2{
     font-family: var(--secondFont); 
     color: rgb(227, 238, 236); 
@@ -145,7 +145,7 @@
 /*=========== FEATURE SEVEN CSS ============*/
 .first-container .section-word, .first-container .section-desc{flex: 1; min-width: 300px;}
 .first-container{padding-bottom: 30vh; background-color: var(--bg-color);}
-.second-container .container{margin-top: -35vh; width: 100%;}
+.second-container .container-section{margin-top: -35vh; width: 100%;}
 .news-date{color: var(--second-color);}
 .news-card{
     background-color: #fff;
@@ -231,6 +231,6 @@
 
     /*=========== FEATURE SEVEN CSS ============*/
     .first-container{padding-bottom: 20vh;}
-    .second-container .container{margin-top: -30vh;}
+    .second-container .container-section{margin-top: -30vh;}
     .news-card{max-width: 350px;}
 }

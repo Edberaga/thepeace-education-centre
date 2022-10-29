@@ -6,6 +6,7 @@
     box-shadow: var(--lightShadow);
     transition: var(--fastTrans);
     text-align: center;
+    z-index: -1;
 }
 
 .review:hover {

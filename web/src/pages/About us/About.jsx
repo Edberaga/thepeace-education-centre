@@ -5,7 +5,7 @@ export const About = () => {
     return (
         <>
             <section className="about-mission">
-                <div className="container">
+                <div className="container-section">
                     <div className="about-mission-1">
                         <h1>School Mission</h1>
                         <p>{Quote["our-goal-about"]}</p>
@@ -17,7 +17,7 @@ export const About = () => {
             </section>
 
             <section className="about-history">
-                <div className="container">
+                <div className="container-section">
                     <div className="about-history-1">
                         <img src={require('../../assets/img/school_history.jpg')} className="about-history-img" alt="" />
                     </div>

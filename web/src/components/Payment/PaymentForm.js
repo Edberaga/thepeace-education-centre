@@ -62,7 +62,7 @@ export default function PaymentForm() {
   return (
     <>
     {!success ?
-    <div className="container">
+    <div className="container-section">
         <form onSubmit={handleSubmit}>
             <fieldset className="PayFormGroup">
                 <div className="PayFormRow">

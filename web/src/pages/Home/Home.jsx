@@ -55,7 +55,7 @@ export const Home = () => {
 
         {/*Feature One Section */}
             <section className="feature-one">
-                <div className="container">
+                <div className="container-section">
                     <section className="section-one">
                         {HomeData.map((record, index) => {
                             return (
@@ -76,7 +76,7 @@ export const Home = () => {
 
         {/*Feature Two Section */}
             <section className="feature-two">
-                <div className="container">
+                <div className="container-section">
                     <div className="section section-img">
                         <img src={require('../../assets/img/section.jpg')} className="section-image" alt="The Peace Education Centre Students" />
                     </div>
@@ -89,7 +89,7 @@ export const Home = () => {
             </section>
 
         {/*Feature Three Section */}
-            <section className="container container-three">
+            <section className="container-section-full container-three">
                 <div className="feature-three">
                     <div className="section section3-video">
                         <h2>Welcome To The Peace Education Centre</h2>
@@ -129,7 +129,7 @@ export const Home = () => {
 
         {/*Feature What They Say Section */}
             <section className="feature-five">
-                <div className="container">
+                <div className="container-section">
                     <div className="section section-word">
                         <h2>Happy People</h2>
                         <h1>What they say</h1>
@@ -152,7 +152,7 @@ export const Home = () => {
 
             {/*Feature 6 Join Us Section */}
             <section className="feature-six">
-                <div className="container">
+                <div className="container-section">
                     <div className="section section-word">
                         <img src={require("../../assets/img/logo_hand.png")} width="90px" alt="T-PEC Logo"/>
                         <h2>Join to Educate the Children!</h2>
@@ -168,7 +168,7 @@ export const Home = () => {
             {/*Feature 7 Blog Section */}
             <section className="feature-seven">
                 <section className="first-container">     
-                    <div className="container">
+                    <div className="container-section">
                         <div className="section section-word">
                             <h2>From the Blog</h2>
                             <h1>News & Articles</h1>
@@ -180,7 +180,7 @@ export const Home = () => {
                 </section>
 
                 <section className="second-container">
-                    <div className="container">
+                    <div className="container-section">
                         <Link>             
                             <div className="news-card">
                                 <div className="news-image" style={{backgroundImage: `url(${Blog1img})`} }>

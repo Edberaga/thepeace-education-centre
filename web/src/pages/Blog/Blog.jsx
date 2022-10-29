@@ -6,7 +6,7 @@ export const Blog = () => {
 
   return (
     <>
-    <div className="container-full">
+    <div className="container-section-full">
         <div>
             <Articles/>
         </div>

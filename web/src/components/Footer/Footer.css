@@ -12,8 +12,9 @@ footer{
 .footer-col{
     flex: 1;
     min-width: 300px;
-    margin: 15px;
+    margin: 10px;
 }
+
 
 .footer-col p{font-size: 15px; }
 

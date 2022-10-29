@@ -16,7 +16,7 @@ function Navbar() {
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
 
-        <div className='navbar'>
+        <div className='nav-bar'>
           <div className='first-bar'> 
             <Link to="/">
               <img src={require('../../assets/img/logo.jpeg')} alt="TPEC logo" className='nav-logo'/>
