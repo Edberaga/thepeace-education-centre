@@ -1,5 +1,5 @@
 import React from "react";
-import './App.css'
+
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 //import the pages
 import { Home } from './pages/Home/Home'
@@ -12,6 +12,9 @@ import ErrorPage from "./pages/Others/errorPage";
 import Navbar from "./components/Navbar/Navbar";
 import { Register } from "./pages/User Pages/register";
 import { Footer } from "./components/Footer/Footer";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import './App.css';
 
 function App() {
   return (
