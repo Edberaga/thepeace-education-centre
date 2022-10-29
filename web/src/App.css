@@ -27,13 +27,13 @@ p {
   font-family: var(--secondFont);
   font-weight: 900;
   line-height: 2em; 
-  opacity: 0.85;
   font-size: 18px;
 }
 
 a{
   text-decoration: none;
   color: black;
+  transition: var(--fastTrans);
 }
 
 body{
@@ -60,7 +60,7 @@ button a{
   transition: var(--mediumTrans);
 }
 
-.container, .container-full{
+.container-section, .container-section-full{
   padding: 5vh 0;
   margin: 0 auto;
   display: flex;
@@ -69,7 +69,7 @@ button a{
   width: 80%;
 }
 
-.container-full{
+.container-section-full{
   width: 100%;
 }
 
@@ -78,10 +78,20 @@ button a{
 span {margin: 0 12px;}
 .marked {color: var(--second-color); margin: 0;}
 
+/*To fix bootstrap*/
+dl, ol, ul, p {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+a:hover{
+  color: inherit;
+}
+
 @media screen and (max-width: 900px) {
-  .container{width: 100%; }
+  .container-section{width: 100%; }
 }
 
 @media screen and (max-width: 500px) {
-  .section{padding: 5px 12px;}
+  .container-section{padding: 5px 12px;}
 }
