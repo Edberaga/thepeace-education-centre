@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from "react";
-import { AddArticle } from "./AddArticle";
 import {db} from '../../config/firebase';
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 
 import './Articles.css'
 import { FaHeart } from "react-icons/fa";
-import Blog1img from '../../assets/img/blog-1.jpg';
 
 export default function Articles() {
   const [articles, setArticles] = useState([]);
@@ -23,7 +21,7 @@ export default function Articles() {
   },[]);
   return (
   <>
-    <div className="container-full">
+    <div className="container-section-full">
         {
             articles.length === 0 ? (
                 <h1>No Articles found!</h1>
