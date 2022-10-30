@@ -146,42 +146,6 @@
 .first-container .section-word, .first-container .section-desc{flex: 1; min-width: 300px;}
 .first-container{padding-bottom: 30vh; background-color: var(--bg-color);}
 .second-container .container-section{margin-top: -35vh; width: 100%;}
-.news-date{color: var(--second-color);}
-.news-card{
-    background-color: #fff;
-    margin: 10px;
-    box-shadow: var(--lightShadow);
-    max-width: 25vw;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.news-image{
-    border-radius: 10px 10px 0px 0px;
-    background-position: top center;
-    background-size: cover;
-    height: 250px;
-    margin: 0;
-}
-
-.news-word, .news-media{padding: 15px 12px;}
-.news-word p {font-size: 15px; max-height: 200px;}
-.news-word h1{
-    line-height: 1.5em; 
-    color: var(--primary-color); 
-    font-family: var(--secondFont); 
-    font-weight: 600;
-    font-size: 22px;
-}
-.news-media{display: flex; align-items: center;}
-.news-comment, .news-like {flex:1; line-height: 0;}
-.news-comment {font-size: 14px;}
-
-.news-comment span, .news-like span{vertical-align: middle; margin: 2px; font-size: 20px; color: var(--primary-color);}
-
-.news-like{text-align: right;} 
-.news-like svg{font-size: 20px; transition: var(--fastTrans);}
-.news-like svg:hover{filter: drop-shadow(0px 0px 2px rgba(255, 0, 0, 0.666)); transform: scale(1.1);} 
 
 @media screen and (max-width: 900px) {
     .section-one{width: 80%;} .feature-col{width: 280px;}
@@ -232,5 +196,5 @@
     /*=========== FEATURE SEVEN CSS ============*/
     .first-container{padding-bottom: 20vh;}
     .second-container .container-section{margin-top: -30vh;}
-    .news-card{max-width: 350px;}
+    
 }
