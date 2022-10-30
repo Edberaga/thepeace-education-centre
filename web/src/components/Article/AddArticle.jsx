@@ -1,7 +1,5 @@
 import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
-import {toast} from 'react-toastify';
-import { Progress } from "reactstrap";
 import React, {useState} from 'react';
 import { db, storage } from '../../config/firebase';
 import './AddArticle.css';
@@ -11,15 +9,17 @@ export default function AddArticle() {
     title: "",
     content: "",
     image: "",
-    createdAt: Timestamp.now().toDate(),
+    createAt: Timestamp.now().toDate(),
   });
 
+  const [progress, setProgress] = useState(0);
+
   const handleChange=(e) => {
-    setFormData({...formData,[e.target.name]: e.target.value});
+    setFormData({...formData, [e.target.name]: e.target.value});
   };
 
   const handleImageChange=(e) => {
-    setFormData({...formData, image: e.target.files[0]})
+    setFormData({...formData, image: e.target.files[0] })
   };
 
   const handlePublish = () => {
@@ -32,37 +32,48 @@ export default function AddArticle() {
 
     const uploadImage = uploadBytesResumable(storageRef, formData.image);
 
-    uploadImage.on("state_changed", (err) => {
-      console.log(err);
-    },
-    () => {
-      setFormData({
-        title: '',
-        content: '',
-        image: '',
-      });
-
-      getDownloadURL(uploadImage.snapshot.ref)
-      .then((url) => {
-        const articleRef = collection(db, "Articles");
-        addDoc(articleRef, {
-          title: formData.title,
-          content: formData.content,
-          image: url,
-          createAt: Timestamp.now().toDate()
-        })
-        .then(()=> {
-          toast("Article added succesfully", {type: "success"});
-        })
-        .catch((err) => {
-          toast("Error adding Article", {type: "error"});
+    uploadImage.on(
+      "state_changed",
+      (snapshot) => {
+        const progressPercent = Math.round(
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        );
+        setProgress(progressPercent);
+      },
+      (err) => {
+        console.log(err);
+      },
+      () => {
+        setFormData({
+          title: "",
+          content: "",
+          image: "",
         });
-      });
-    });
+
+        getDownloadURL(uploadImage.snapshot.ref).then((url) => {
+          const articleRef = collection(db, "Articles");
+          addDoc(articleRef, {
+            title: formData.title,
+            content: formData.content,
+            image: url,
+            createAt: Timestamp.now().toDate(),
+          })
+            .then(() => {
+              alert('Succesfully Add new Articles!');
+              setProgress(0);
+            })
+            .catch((err) => {
+              console.log(err);
+              alert('Failed to Add new Articles...');
+            });
+        });
+      }
+    );
   };
+
   return (
     <>
-      <div className="add-article-form" style={{position: "fixed"}}>
+      <div className="add-article-form">
         <h2>Create Article</h2>
         {/*Title */}
         <label htmlFor="">Title</label>
@@ -78,18 +89,29 @@ export default function AddArticle() {
         <label htmlFor="">Content</label>
         <textarea name='content' className='form-control form-textarea' value={formData.content} onChange={(e)=>handleChange(e)}/>
 
-        {/*Title */}
+        {/*Image */}
         <label htmlFor="">Image</label>
         <input type="file" name='image' accept='image/*' className='form-control' onChange={(e)=>handleImageChange(e)}/>
-        <Progress
-          animated
-          color="warning"
-          striped
-          value={18}
-          className="article-process"
-        />
 
-        <button className='add-button' onClick={handlePublish}>Publish</button>
+        {/*Progress Bar */}
+        {progress === 0 ? ''
+        :
+        <div className="progress">
+          <div
+            className="progress-bar progress-bar-striped bg-warning"
+            style={{ width: `${progress}%` }}
+          >
+            {`uploading image ${progress}%`}
+          </div>
+        </div>
+        }
+
+        <button
+            className="form-control btn btn-warning mt-2"
+            onClick={handlePublish}
+          >
+            Publish
+        </button>
       </div>
     </>
   )
