@@ -10,7 +10,8 @@ import { Gallery } from "./pages/Gallery";
 import { Contact } from "./pages/Contact";
 import ErrorPage from "./pages/Others/errorPage";
 import Navbar from "./components/Navbar/Navbar";
-import { Register } from "./pages/User Pages/register";
+import Register from "./components/Auth/Register";
+import Login from "./components/Auth/Login";
 import { Footer } from "./components/Footer/Footer";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -31,6 +32,7 @@ function App() {
           
           {/*Registeration Pages */}
           <Route path='/signup' element={<Register/>} />
+          <Route path='/login' element={<Login/>} />
 
           {/*Others */}
           <Route path='*' element={<ErrorPage/>} />
