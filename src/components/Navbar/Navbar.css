@@ -118,6 +118,7 @@
   margin: auto;
   border: 0;
   background-color: #fff;
+  color: var(--second-color);
 }
 
 .mobile-nav-user{

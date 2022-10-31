@@ -6,8 +6,12 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './Navdata';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
+import {useAuthState} from 'react-firebase-hooks/auth'
+import { auth } from '../../config/firebase';
+import { signOut } from 'firebase/auth';
 
 function Navbar() {
+  const [user] = useAuthState(auth);
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -60,12 +64,27 @@ function Navbar() {
               <Link to='#' className='menu-bars'>
                 <FaBars onClick={showSidebar} className='menu-btn'/>
               </Link>
+              <div className="nav-user">
+              {user ? (
+                <div className='nav-user-display'>
+                  <p className="pe-4">
+                    Hi, {user.displayName || user.email}
+                  </p>
+                  <button className="btn btn-primary btn-sm me-3"
+                  onClick={()=>{signOut(auth)}}
+                  >Logout</button>
+                </div>
+              ) : (
               <button className="nav-user">
                 <Link to='/signup'>
                   <FaUserCircle className='nav-user-icon'/>
                   <span>Sign Up</span>
                 </Link>
               </button>
+              )}
+              
+
+              </div>
             </div>
           </div>
         </div>
