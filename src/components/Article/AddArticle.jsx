@@ -57,6 +57,8 @@ export default function AddArticle() {
             content: formData.content,
             image: url,
             createAt: Timestamp.now().toDate(),
+            likes: [],
+            comments: []
           })
             .then(() => {
               alert('Succesfully Add new Articles!');
@@ -87,7 +89,13 @@ export default function AddArticle() {
 
         {/*Content*/}
         <label htmlFor="">Content</label>
-        <textarea name='content' className='form-control form-textarea' value={formData.content} onChange={(e)=>handleChange(e)}/>
+        <textarea 
+          name='content' 
+          className='form-control form-textarea' 
+          style={{height: 200}} 
+          value={formData.content} 
+          onChange={(e)=>handleChange(e)}
+        />
 
         {/*Image */}
         <label htmlFor="">Image</label>
