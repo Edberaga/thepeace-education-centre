@@ -18,17 +18,17 @@ export const Blog = () => {
     </div>
 
     {
-      !user ?
-      <>
-        ''
-      </>
-      :
+      user && user.uid === 'wXdT70ui90WaxRTvGBBJcVXZCnp2' ?
       <>
       <div>
         <div>
           <AddArticle/>
         </div>
       </div>
+      </>
+      :
+      <>
+        ''
       </>
     }
     </>
