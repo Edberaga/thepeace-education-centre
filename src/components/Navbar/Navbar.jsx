@@ -68,7 +68,7 @@ function Navbar() {
               {user ? (
                 <div className='nav-user-display'>
                   <p className="pe-4">
-                    Hi, {user.displayName || user.email}
+                    Hi, {user.displayName}
                   </p>
                   <button className="btn btn-primary btn-sm me-3"
                   onClick={()=>{signOut(auth)}}
