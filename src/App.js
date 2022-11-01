@@ -8,6 +8,7 @@ import { Blog } from "./pages/Blog/Blog";
 import { Donation } from "./pages/Donate/Donation";
 import { Gallery } from "./pages/Gallery";
 import { Contact } from "./pages/Contact";
+import Article from "./components/Article/Article";
 import ErrorPage from "./pages/Others/errorPage";
 import Navbar from "./components/Navbar/Navbar";
 import Register from "./components/Auth/Register";
@@ -15,6 +16,7 @@ import Login from "./components/Auth/Login";
 import { Footer } from "./components/Footer/Footer";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'font-awesome/css/font-awesome.css';
 import './App.css';
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
           <Route path='/blog' element={<Blog/>} />
           <Route path='/gallery' element={<Gallery/>} />
           <Route path='/contact' element={<Contact/>} />
+
+          <Route path='/blog/:id' element={<Article/>}/>
           
           {/*Registeration Pages */}
           <Route path='/signup' element={<Register/>} />
