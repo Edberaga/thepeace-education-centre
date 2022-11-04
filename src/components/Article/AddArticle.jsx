@@ -1,10 +1,12 @@
 import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
 import React, {useState} from 'react';
-import { db, storage } from '../../config/firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth, db, storage } from '../../config/firebase';
 import './AddArticle.css';
 
 export default function AddArticle() {
+  const [user] = useAuthState(auth);
   const [formData, setFormData] = useState({
     title: "",
     content: "",
