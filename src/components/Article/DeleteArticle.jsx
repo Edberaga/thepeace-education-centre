@@ -6,6 +6,7 @@ import { deleteObject, ref } from 'firebase/storage';
 
 function DeleteArticle({id, image}) {
     const handleDelete = async() => {
+        //use window confirm to consider Admin to delete the article or not.
         if(window.confirm("Are you sure you want to delete this Article?")) {
             try {
                 await deleteDoc(doc(db, "Articles", id))
