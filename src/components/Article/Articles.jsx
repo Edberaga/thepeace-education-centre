@@ -43,12 +43,12 @@ export default function Articles() {
         <div className="news-icon">
           <div className="news-media">
               <p className="news-comment">
-                  <p><span>100</span></p> <p>comments</p>
+                  <p><span>{comments?.length}</span></p> <p>comments</p>
               </p>
               <p className="news-like">
                 {user 
-                ? <LikeArticle id={id} likes={likes} className="news-like-icon"/> 
-                : <Link to={'/login'}><i className="fas fa-heart fa-lg" /> {/*<span>{articles.likes.length}</span>*/}</Link>
+                ? <><LikeArticle id={id} likes={likes} className="news-like-icon"> </LikeArticle><span>{likes?.length}</span></>
+                : <Link to={'/login'}><i className="fas fa-heart fa-lg"> <span>{likes?.length}</span></i></Link>
                 }
               </p>
           </div>
