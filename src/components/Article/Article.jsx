@@ -4,19 +4,20 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams, Link } from 'react-router-dom';
 import { auth, db } from '../../config/firebase';
 import './Article.css';
+import Comment from './Comment';
 import LikeArticle from './LikeArticle';
 
 export default function Article() {
     const {id} = useParams();
-    const {user} = useAuthState(auth);
     const [article, setArticle] = useState(null);
+    const [user] = useAuthState(auth);
 
     useEffect( () => {
         const docRef = doc(db, "Articles", id);
         onSnapshot(docRef, (snapshot) => {
             setArticle({...snapshot.data(), id: snapshot.id});
         });
-    })
+    }, [])
 
   return (
     <>
@@ -38,14 +39,22 @@ export default function Article() {
             <div className="blog-content">
                 <p>{article.content}</p>
             </div>
-            <div className="row">
-                <h2>Comments</h2>
+            <div className="blog-part">
+                <div>
+                    <h2>Comments</h2>
+                </div>
+                <div>
                 {user 
-                ? <LikeArticle id={id} likes={article.likes} className="news-like-icon"/> 
-                : ''
+                    ? <LikeArticle id={id} likes={article.likes} />
+                    : <Link to={'/login'}><i className="fas fa-heart fa-lg"/></Link>
                 }
+                    <span>{article.likes.length}</span>
+                </div>
             </div>
-            
+
+            <div className="blog-comment">
+                <Comment id={article.id}/>
+            </div>
         </div>
     )}
     </div>
