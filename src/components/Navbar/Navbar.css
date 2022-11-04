@@ -131,6 +131,10 @@
   background-color: var(--second-color);
 }
 
+.logout-btn a{
+  background-color: none;
+}
+
 .nav-user a:hover, .mobile-nav-user a:hover{background-color: var(--primary-color);}
 
 .nav-user-icon, .mobile-nav-user-icon{

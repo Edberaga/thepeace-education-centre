@@ -70,9 +70,11 @@ function Navbar() {
                   <p className="pe-4">
                     Hi, {user.displayName}
                   </p>
+                  
                   <button className="btn btn-primary btn-sm me-3"
-                  onClick={()=>{signOut(auth)}}
-                  >Logout</button>
+                    onClick={()=>{signOut(auth)}}
+                    >Logout
+                  </button>
                 </div>
               ) : (
               <button className="nav-user">
