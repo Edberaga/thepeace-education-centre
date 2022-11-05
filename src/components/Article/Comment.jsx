@@ -35,18 +35,20 @@ export default function Comment({ id }) {
         }
     };
 
-    const deleteComment = (comment) => {
-        console.log(comment);
-        updateDoc(commentRef, {
-            comments:arrayRemove(comment),
-        })
-        .then((e) => {
-            console.log(e);
-        })
-        .catch((error) => {
-            console.log(error);
-        })
-    };
+    const deleteComment = async(comment) => {
+        //use window confirm to consider Admin or User to delete the comments or not.
+        if(window.confirm("Are you sure you want to delete this Comment?")) {
+            try {
+            console.log(comment);
+            updateDoc(commentRef, {
+                comments:arrayRemove(comment),
+            })}
+            catch(error) {
+                alert("Error Deleting Comment...");
+                console.log(error);
+            }
+        }
+    }
 
   return (
     <div>
