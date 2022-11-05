@@ -6,7 +6,7 @@ import { Home } from './pages/Home/Home'
 import { About } from "./pages/About us/About";
 import { Blog } from "./pages/Blog/Blog";
 import { Donation } from "./pages/Donate/Donation";
-import { Gallery } from "./pages/Gallery";
+import { Gallery } from "./pages/Gallery/Gallery";
 import { Contact } from "./pages/Contact";
 import Article from "./components/Article/Article";
 import ErrorPage from "./pages/Others/errorPage";
