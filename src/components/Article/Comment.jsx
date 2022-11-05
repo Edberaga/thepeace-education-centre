@@ -57,7 +57,7 @@ export default function Comment({ id }) {
                     <div className="border comment-container">
                         <div className="coll-11">
                             <p className={` ${
-                                user === currentUser.uid
+                                currentUser && currentUser.uid === user
                                 ? "comment-currentUser"
                                 : "comment-user"
                             }`}>{userName}</p>
@@ -66,7 +66,7 @@ export default function Comment({ id }) {
 
                         <div className="row">
                             <p className='comment-bar'>
-                            {user === currentUser.uid && (
+                            {currentUser && currentUser.uid === user ? (
                             <>
                                 <span
                                     className='comment-delete' 
@@ -83,7 +83,7 @@ export default function Comment({ id }) {
                                     Edit
                                 </span>
                             </>
-                            )}
+                            ) : ('')}
                             <span className='comment-date'>{createAt.toDate().toDateString()}</span>
                             </p>
                         </div>
