@@ -11,26 +11,12 @@ export const Blog = () => {
 
   return (
     <>
-    <div>
       <div className="container-article">
         <Articles/>
       </div>
-    </div>
 
-    {
-      user && user.uid === 'wXdT70ui90WaxRTvGBBJcVXZCnp2' ?
-      <>
-      <div>
-        <div>
-          <AddArticle/>
-        </div>
-      </div>
-      </>
-      :
-      <>
-        ''
-      </>
-    }
+    {/*If the admin loged in, then able to access the Add Article component */}
+    { user && user.uid === 'wXdT70ui90WaxRTvGBBJcVXZCnp2' ? <><AddArticle/></> : <>''</>}
     </>
   )
 }
