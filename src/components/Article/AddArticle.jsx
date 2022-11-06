@@ -1,12 +1,10 @@
 import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
 import React, {useState} from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth, db, storage } from '../../config/firebase';
+import {  db, storage } from '../../config/firebase';
 import './AddArticle.css';
 
 export default function AddArticle() {
-  const [user] = useAuthState(auth);
   const [formData, setFormData] = useState({
     title: "",
     content: "",
@@ -30,7 +28,7 @@ export default function AddArticle() {
       return;
     }
 
-    const storageRef = ref(storage, `/images/${Date.now()}${formData.image.name}`);
+    const storageRef = ref(storage, `/article-img/${Date.now()}${formData.image.name}`);
 
     const uploadImage = uploadBytesResumable(storageRef, formData.image);
 
