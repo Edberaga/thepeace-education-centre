@@ -60,7 +60,7 @@ button a{
   transition: var(--mediumTrans);
 }
 
-.container-section, .container-section-full{
+.container-section, .container-section-full, .container-heading{
   padding: 5vh 0;
   margin: 0 auto;
   display: flex;
@@ -69,9 +69,14 @@ button a{
   width: 80%;
 }
 
-.container-section-full{
-  width: 100%;
+.container-heading{
+  background-color: var(--primary-color); 
+  padding: 10vh 0;
+  color: white;
+  font-family: var(--quoteFont);
 }
+
+.container-section-full, .container-heading{width: 100%;}
 
 .section{padding: 15px;} .section-center{display: flex; justify-content: center;}
 
@@ -93,5 +98,5 @@ a:hover{
 }
 
 @media screen and (max-width: 500px) {
-  .container-section{padding: 5px 12px;}
+  .container-section{padding: 2em 12px;}
 }
