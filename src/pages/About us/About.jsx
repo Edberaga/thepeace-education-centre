@@ -4,6 +4,7 @@ import Quote from '../../common.json'
 export const About = () => {
     return (
         <>
+        <div className="container-heading"><h1>About Us</h1></div>
             <section className="about-mission">
                 <div className="container-section">
                     <div className="about-mission-1">
