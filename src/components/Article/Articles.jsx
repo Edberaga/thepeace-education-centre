@@ -43,7 +43,7 @@ export default function Articles() {
         <div className="news-icon">
           <div className="news-media">
               <p className="news-comment">
-                  <p><span>{comments?.length}</span></p> <p>comments</p>
+                <Link to={`/blog/${id}`}><span>{comments?.length}</span> comment</Link>
               </p>
               <p className="news-like">
                 {user 

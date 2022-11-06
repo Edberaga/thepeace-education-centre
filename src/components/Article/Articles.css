@@ -35,6 +35,19 @@
     justify-content: space-between;
     align-self: flex-end;
 }
+
+.news-read-more{
+    font-family: var(--primaryFont);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--primary-color);
+    transition: var(--fastTrans);
+}
+
+.news-read-more:hover{
+    filter: brightness(1.5);
+}
+
 .news-media{display: flex; align-items: center; width: 100%;}
 .news-comment, .news-like {flex:1; line-height: 0;}
 .news-comment span, .news-like span{vertical-align: middle; margin: 0 5px; font-size: 20px; color: var(--primary-color);}
