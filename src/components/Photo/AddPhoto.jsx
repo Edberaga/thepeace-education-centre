@@ -36,7 +36,7 @@ export default function AddPhoto() {
                 const progressPercent = Math.round(
                     (snapshot.bytesTransferred / snapshot.totalBytes) * 100
                 );
-                setUploadData(progressPercent);
+                setProgress(progressPercent);
             },
             (err) => {
                 console.log(err);
@@ -74,7 +74,7 @@ export default function AddPhoto() {
   return (
     <>
     <div className="add-article-form">
-        <h2>Create Article</h2>
+        <h2>Upload Photo</h2>
         {/*Title */}
         <label htmlFor="">Photo Title</label>
         <input 
