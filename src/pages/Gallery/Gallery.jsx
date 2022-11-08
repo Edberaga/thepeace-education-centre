@@ -14,10 +14,8 @@ export const Gallery = () => {
             <Photos/>
         </div>
 
-        <div className="container-section">
-            {/*If the admin loged in, then able to access the Add Article component */}
-            { user && user.uid === 'wXdT70ui90WaxRTvGBBJcVXZCnp2' ? <><AddPhoto/></> : <></>}
-        </div>
+        {/*If the admin loged in, then able to access the Add Article component */}
+        { user && user.uid === 'wXdT70ui90WaxRTvGBBJcVXZCnp2' ? <><AddPhoto/></> : <></>}
         </>
     )
 }
