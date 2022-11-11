@@ -107,7 +107,7 @@ export default function Comment({ id }) {
                     />
                 )
                 : (
-                    <h2></h2>
+                    <h2> </h2>
                 )
             }
     </div>
