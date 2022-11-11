@@ -17,6 +17,18 @@ const AmountPicker = ({ onAmountChange }) => {
           <input type="radio" value="15.00" name="amount" id="radio-9" />
           15.00
         </label>
+        <label>
+          <input type="radio" value="25.00" name="amount" id="radio-9" />
+          25.00
+        </label>
+        <label>
+          <input type="radio" value="50.00" name="amount" id="radio-9" />
+          50.00
+        </label>
+        <label>
+          <input type="radio" value="100.00" name="amount" id="radio-9" />
+          100.00
+        </label>
       </fieldset>
     );
 }
