@@ -1,5 +1,5 @@
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-import React, {useState, useEffect, useRef} from "react";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+import React from "react";
 import './Donation.css';
 import DonationForm from "./DonationForm";
 
