@@ -7,7 +7,7 @@ import { About } from "./pages/About us/About";
 import { Blog } from "./pages/Blog/Blog";
 import { Donation } from "./pages/Donate/Donation";
 import { Gallery } from "./pages/Gallery/Gallery";
-import { Contact } from "./pages/Contact";
+import { Contact } from "./pages/Contact/Contact";
 import Article from "./components/Article/Article";
 import ErrorPage from "./pages/Others/errorPage";
 import Navbar from "./components/Navbar/Navbar";
