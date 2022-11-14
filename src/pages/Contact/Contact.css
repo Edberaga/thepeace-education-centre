@@ -23,7 +23,6 @@
 
 .contact-form {flex: 2;}
 .contact-detail{flex: 1;}
-
 .contact-form, .contact-detail{padding: 5% 2.5%;}
 
 .label-input, .text-input, .submit-btn{
@@ -41,10 +40,10 @@
     background-color: var(--second-color);
     font-family: var(--quoteFont);
     font-weight: 500;
-    transition: 0.5s;
+    transition: var(--mediumTrans);
 }
 .submit-btn:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .contact-form{background-color: rgb(255, 255, 255);}
@@ -52,4 +51,27 @@
     background-color: var(--primary-color); 
     color: #fff;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column;
+}
+
+.contact-detail h5{line-height: 0.25em;}
+
+@media screen and (max-width: 900px) {
+    .contact{width: 90%; flex-flow: row wrap;}
+    .contact-form, .contact-detail{flex: 1; min-width: 500px;}
+
+    .contact-detail{flex-flow: row;}
+    .detail-part{width: 33.33%;}
+    .detail-part p{font-size: 14px;}
+}
+
+@media screen and (max-width: 500px) {
+    .label-input{width: 92.5%;}
+    .submit-btn{text-align: center; width: 92.5%;}
+    .contact-form, .contact-detail{width: 100%; min-width: 0px; flex:none;}
+    
+    .contact-detail{flex-flow: column wrap;}
+    .detail-part{width: 100%; margin: 15px auto;}
 }
