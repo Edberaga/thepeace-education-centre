@@ -1,28 +1,20 @@
 import React from "react";
+import ContactForm from "./ContactForm";
+import ContactDetail from "./ContactDetail";
+import './Contact.css';
 
 export const Contact = () => {
     return (
         <>
-        <div className="container-heading"><h1>Contact Us</h1></div>
-        {/*Title */}
-        <label htmlFor="">Title</label>
-        <input 
-          type="text" 
-          name='title' 
-          className='form-control' 
-          value={formData.title} 
-          onChange={(e)=>handleChange(e)}
-        />
+        <div className="contact-heading">
+            <h4>Let's Get known each other</h4>
+            <h1>Contact With Us</h1>
+        </div>
 
-        {/*Content*/}
-        <label htmlFor="">Content</label>
-        <textarea 
-          name='content' 
-          className='form-control form-textarea' 
-          style={{height: 200}} 
-          value={formData.content} 
-          onChange={(e)=>handleChange(e)}
-        />
+        <div className="contact">
+            <ContactForm/>
+            <ContactDetail/>
+        </div>
         </>
     )
 }
